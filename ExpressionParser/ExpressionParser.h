@@ -8,6 +8,4 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ExpressionParser : NSObject
 
-@end
