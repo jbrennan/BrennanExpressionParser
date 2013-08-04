@@ -10,6 +10,8 @@
 		CD13E3CF17AEBDFE0035A43B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD13E3CE17AEBDFE0035A43B /* Cocoa.framework */; };
 		CD13E3D917AEBDFE0035A43B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD13E3D717AEBDFE0035A43B /* InfoPlist.strings */; };
 		CD13E3F617AEBED50035A43B /* CoreParse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD13E3ED17AEBEC50035A43B /* CoreParse.framework */; };
+		CD13E3FA17AEC2330035A43B /* EXPTokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13E3F817AEC2330035A43B /* EXPTokenizer.h */; };
+		CD13E3FB17AEC2330035A43B /* EXPTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13E3F917AEC2330035A43B /* EXPTokenizer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		CD13E3DA17AEBDFE0035A43B /* ExpressionParser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExpressionParser-Prefix.pch"; sourceTree = "<group>"; };
 		CD13E3DB17AEBDFE0035A43B /* ExpressionParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpressionParser.h; sourceTree = "<group>"; };
 		CD13E3E417AEBEC50035A43B /* CoreParse.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreParse.xcodeproj; path = CoreParse/CoreParse.xcodeproj; sourceTree = "<group>"; };
+		CD13E3F817AEC2330035A43B /* EXPTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPTokenizer.h; sourceTree = "<group>"; };
+		CD13E3F917AEC2330035A43B /* EXPTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPTokenizer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		CD13E3D417AEBDFE0035A43B /* ExpressionParser */ = {
 			isa = PBXGroup;
 			children = (
+				CD13E3F717AEBF210035A43B /* Parser */,
 				CD13E3E317AEBE540035A43B /* Libraries */,
 				CD13E3DB17AEBDFE0035A43B /* ExpressionParser.h */,
 				CD13E3D517AEBDFE0035A43B /* Supporting Files */,
@@ -152,6 +157,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CD13E3F717AEBF210035A43B /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				CD13E3F817AEC2330035A43B /* EXPTokenizer.h */,
+				CD13E3F917AEC2330035A43B /* EXPTokenizer.m */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -159,6 +173,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD13E3FA17AEC2330035A43B /* EXPTokenizer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD13E3FB17AEC2330035A43B /* EXPTokenizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
