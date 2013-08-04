@@ -17,7 +17,7 @@ NSString * const EXPTokenKeywordSymbolMultiply = @"*";
 NSString * const EXPTokenKeywordSymbolDivide = @"/";
 NSString * const EXPTokenKeywordSymbolOpenParenthesis = @"(";
 NSString * const EXPTokenKeywordSymbolCloseParenthesis = @")";
-NSString * const EXPTokenKeywordNameSquare = @"sqr";
+NSString * const EXPTokenKeywordNameSquare = @"square";
 
 
 @interface EXPTokenizer () <CPTokeniserDelegate>
@@ -37,14 +37,15 @@ NSString * const EXPTokenKeywordNameSquare = @"sqr";
 		[tokenizer addTokenRecogniser:[CPWhiteSpaceRecogniser whiteSpaceRecogniser]];
 		[tokenizer addTokenRecogniser:[CPQuotedRecogniser quotedRecogniserWithStartQuote:@"/*" endQuote:@"*/" name:@"Comment"]];
 		
-		[tokenizer addTokenRecogniser:[CPKeywordRecogniser recogniserForKeyword:@"+"]];
-		[tokenizer addTokenRecogniser:[CPKeywordRecogniser recogniserForKeyword:@"-"]];
-		[tokenizer addTokenRecogniser:[CPKeywordRecogniser recogniserForKeyword:@"**"]];
-		[tokenizer addTokenRecogniser:[CPKeywordRecogniser recogniserForKeyword:@"*"]];
-		[tokenizer addTokenRecogniser:[CPKeywordRecogniser recogniserForKeyword:@"/"]];
-		[tokenizer addTokenRecogniser:[CPKeywordRecogniser recogniserForKeyword:@"("]];
-		[tokenizer addTokenRecogniser:[CPKeywordRecogniser recogniserForKeyword:@")"]];
-		[tokenizer addTokenRecogniser:[CPKeywordRecogniser recogniserForKeyword:@"sqr"]];
+		[tokenizer addTokenRecogniserForKeyword:EXPTokenKeywordSymbolPlus];
+		[tokenizer addTokenRecogniserForKeyword:EXPTokenKeywordSymbolMinus];
+		[tokenizer addTokenRecogniserForKeyword:EXPTokenKeywordSymbolPower];
+		[tokenizer addTokenRecogniserForKeyword:EXPTokenKeywordSymbolMultiply];
+		[tokenizer addTokenRecogniserForKeyword:EXPTokenKeywordSymbolDivide];
+		[tokenizer addTokenRecogniserForKeyword:EXPTokenKeywordSymbolOpenParenthesis];
+		[tokenizer addTokenRecogniserForKeyword:EXPTokenKeywordSymbolCloseParenthesis];
+		[tokenizer addTokenRecogniserForKeyword:EXPTokenKeywordNameSquare];
+
 		
 		[tokenizer setDelegate:self];
 		
@@ -63,7 +64,7 @@ NSString * const EXPTokenKeywordNameSquare = @"sqr";
 
 
 - (void)tokeniser:(CPTokeniser *)tokeniser requestsToken:(CPToken *)token pushedOntoStream:(CPTokenStream *)stream {
-	if (![token isWhiteSpaceToken] && ![[token name] isEqualToString:@"Comment"]) {
+	if (![token isWhiteSpaceToken] && ![[token name] isEqualToString:EXPTokenNameComment]) {
 		[stream pushToken:token];
 	}
 }
