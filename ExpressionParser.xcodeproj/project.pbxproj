@@ -28,6 +28,7 @@
 		CD13E41817AF2DBB0035A43B /* EXPFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13E41617AF2DBB0035A43B /* EXPFunction.m */; };
 		CD13E41C17AF4E630035A43B /* EXPExpressionParser.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13E41A17AF4E630035A43B /* EXPExpressionParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD13E41D17AF4E630035A43B /* EXPExpressionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13E41B17AF4E630035A43B /* EXPExpressionParser.m */; };
+		CD13E43317AF5A370035A43B /* ExpressionParser.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13E3DB17AEBDFE0035A43B /* ExpressionParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +238,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD13E43317AF5A370035A43B /* ExpressionParser.h in Headers */,
 				CD13E41C17AF4E630035A43B /* EXPExpressionParser.h in Headers */,
 				CD13E3FA17AEC2330035A43B /* EXPTokenizer.h in Headers */,
 				CD13E3FE17AECA460035A43B /* EXPGrammar.h in Headers */,
