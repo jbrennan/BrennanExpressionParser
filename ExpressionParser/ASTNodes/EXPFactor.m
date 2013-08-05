@@ -7,7 +7,33 @@
 //
 
 #import "EXPFactor.h"
+#import "EXPExpression.h"
+#import "EXPFunction.h"
+#import "EXPGrammar.h"
 
 @implementation EXPFactor
+
+
+- (id)initWithSyntaxTree:(CPSyntaxTree *)syntaxTree {
+	self = [super init];
+	
+	if (self) {
+		NSLog(@"Factor initWithSyntaxTree: %@", syntaxTree);
+		EXPExpression *e = [syntaxTree valueForTag:EXPGrammarTagExpression];
+		EXPFunction *f = [syntaxTree valueForTag:EXPGrammarTagFunction];
+		
+		if (e) {
+			self.value = e.value;
+		} else if (f) {
+			self.value = f.value;
+		} else {
+			self.value = [[[syntaxTree valueForTag:@"num"] number] floatValue];
+			
+		}
+	}
+	
+	return self;
+}
+
 
 @end
