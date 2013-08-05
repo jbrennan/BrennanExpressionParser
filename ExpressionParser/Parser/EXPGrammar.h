@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const EXPGrammarTagTerm;
+extern NSString * const EXPGrammarTagFactor;
+extern NSString * const EXPGrammarTagExpression;
+extern NSString * const EXPGrammarTagOp;
+extern NSString * const EXPGrammarTagFunction;
+extern NSString * const EXPGrammarTagFunctionName;
+
 /**
  A thin wrapper around CPGrammar for setting up the math grammar.
 */

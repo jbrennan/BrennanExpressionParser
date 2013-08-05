@@ -8,6 +8,13 @@
 
 #import "EXPGrammar.h"
 
+NSString * const EXPGrammarTagTerm = @"term";
+NSString * const EXPGrammarTagFactor = @"fact";
+NSString * const EXPGrammarTagExpression = @"expr";
+NSString * const EXPGrammarTagOp = @"op";
+NSString * const EXPGrammarTagFunction = @"func";
+NSString * const EXPGrammarTagFunctionName = @"funcName";
+
 @interface EXPGrammar ()
 @property (readwrite) CPGrammar *grammar;
 @end
