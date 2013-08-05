@@ -9,7 +9,7 @@
 #import "EXPGrammar.h"
 
 @interface EXPGrammar ()
-@property CPGrammar *grammar;
+@property (readwrite) CPGrammar *grammar;
 @end
 
 

@@ -14,6 +14,8 @@
 		CD13E3FB17AEC2330035A43B /* EXPTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13E3F917AEC2330035A43B /* EXPTokenizer.m */; };
 		CD13E3FE17AECA460035A43B /* EXPGrammar.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13E3FC17AECA460035A43B /* EXPGrammar.h */; };
 		CD13E3FF17AECA460035A43B /* EXPGrammar.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13E3FD17AECA460035A43B /* EXPGrammar.m */; };
+		CD13E40217AECC590035A43B /* EXPParser.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13E40017AECC590035A43B /* EXPParser.h */; };
+		CD13E40317AECC590035A43B /* EXPParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13E40117AECC590035A43B /* EXPParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		CD13E3F917AEC2330035A43B /* EXPTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPTokenizer.m; sourceTree = "<group>"; };
 		CD13E3FC17AECA460035A43B /* EXPGrammar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPGrammar.h; sourceTree = "<group>"; };
 		CD13E3FD17AECA460035A43B /* EXPGrammar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPGrammar.m; sourceTree = "<group>"; };
+		CD13E40017AECC590035A43B /* EXPParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPParser.h; sourceTree = "<group>"; };
+		CD13E40117AECC590035A43B /* EXPParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 				CD13E3F917AEC2330035A43B /* EXPTokenizer.m */,
 				CD13E3FC17AECA460035A43B /* EXPGrammar.h */,
 				CD13E3FD17AECA460035A43B /* EXPGrammar.m */,
+				CD13E40017AECC590035A43B /* EXPParser.h */,
+				CD13E40117AECC590035A43B /* EXPParser.m */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 			files = (
 				CD13E3FA17AEC2330035A43B /* EXPTokenizer.h in Headers */,
 				CD13E3FE17AECA460035A43B /* EXPGrammar.h in Headers */,
+				CD13E40217AECC590035A43B /* EXPParser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +301,7 @@
 			files = (
 				CD13E3FB17AEC2330035A43B /* EXPTokenizer.m in Sources */,
 				CD13E3FF17AECA460035A43B /* EXPGrammar.m in Sources */,
+				CD13E40317AECC590035A43B /* EXPParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

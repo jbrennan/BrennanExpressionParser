@@ -13,4 +13,9 @@
 */
 @interface EXPGrammar : NSObject
 
+/**
+ The configured grammar.
+ */
+@property (readonly) CPGrammar *grammar;
+
 @end
