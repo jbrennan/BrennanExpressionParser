@@ -16,6 +16,8 @@
 		CD13E3FF17AECA460035A43B /* EXPGrammar.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13E3FD17AECA460035A43B /* EXPGrammar.m */; };
 		CD13E40217AECC590035A43B /* EXPParser.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13E40017AECC590035A43B /* EXPParser.h */; };
 		CD13E40317AECC590035A43B /* EXPParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13E40117AECC590035A43B /* EXPParser.m */; };
+		CD13E40717AF2C4F0035A43B /* EXPNode.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13E40517AF2C4F0035A43B /* EXPNode.h */; };
+		CD13E40817AF2C4F0035A43B /* EXPNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13E40617AF2C4F0035A43B /* EXPNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		CD13E3FD17AECA460035A43B /* EXPGrammar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPGrammar.m; sourceTree = "<group>"; };
 		CD13E40017AECC590035A43B /* EXPParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPParser.h; sourceTree = "<group>"; };
 		CD13E40117AECC590035A43B /* EXPParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPParser.m; sourceTree = "<group>"; };
+		CD13E40517AF2C4F0035A43B /* EXPNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPNode.h; sourceTree = "<group>"; };
+		CD13E40617AF2C4F0035A43B /* EXPNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 		CD13E3D417AEBDFE0035A43B /* ExpressionParser */ = {
 			isa = PBXGroup;
 			children = (
+				CD13E40417AF2BF30035A43B /* ASTNodes */,
 				CD13E3F717AEBF210035A43B /* Parser */,
 				CD13E3E317AEBE540035A43B /* Libraries */,
 				CD13E3DB17AEBDFE0035A43B /* ExpressionParser.h */,
@@ -178,6 +183,15 @@
 			path = Parser;
 			sourceTree = "<group>";
 		};
+		CD13E40417AF2BF30035A43B /* ASTNodes */ = {
+			isa = PBXGroup;
+			children = (
+				CD13E40517AF2C4F0035A43B /* EXPNode.h */,
+				CD13E40617AF2C4F0035A43B /* EXPNode.m */,
+			);
+			path = ASTNodes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -188,6 +202,7 @@
 				CD13E3FA17AEC2330035A43B /* EXPTokenizer.h in Headers */,
 				CD13E3FE17AECA460035A43B /* EXPGrammar.h in Headers */,
 				CD13E40217AECC590035A43B /* EXPParser.h in Headers */,
+				CD13E40717AF2C4F0035A43B /* EXPNode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +317,7 @@
 				CD13E3FB17AEC2330035A43B /* EXPTokenizer.m in Sources */,
 				CD13E3FF17AECA460035A43B /* EXPGrammar.m in Sources */,
 				CD13E40317AECC590035A43B /* EXPParser.m in Sources */,
+				CD13E40817AF2C4F0035A43B /* EXPNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
