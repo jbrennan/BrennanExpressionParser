@@ -56,6 +56,13 @@ NSString * const EXPTokenKeywordNameSquare = @"square";
 }
 
 
+#pragma mark - Public API
+
+- (CPTokenStream *)tokenizeExpression:(NSString *)expression {
+	return [self.tokenizer tokenise:expression];
+}
+
+
 #pragma mark - Tokenizer delegate
 
 - (BOOL)tokeniser:(CPTokeniser *)tokeniser shouldConsumeToken:(CPToken *)token {

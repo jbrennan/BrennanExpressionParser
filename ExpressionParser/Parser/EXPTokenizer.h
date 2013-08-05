@@ -23,4 +23,10 @@ extern NSString * const EXPTokenKeywordNameSquare;
 */
 @interface EXPTokenizer : NSObject
 
+
+/**
+ Returns a `CPTokenStream` after tokenizing the given expression.
+*/
+- (CPTokenStream *)tokenizeExpression:(NSString *)expression;
+
 @end

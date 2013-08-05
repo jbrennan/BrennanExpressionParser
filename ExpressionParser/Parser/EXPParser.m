@@ -8,6 +8,11 @@
 
 #import "EXPParser.h"
 #import "EXPGrammar.h"
+#import "EXPTokenizer.h"
+#import "EXPExpression.h"
+
+const double EXPExpressionParserErrorResult = (double)CGFLOAT_MAX;
+
 
 @interface EXPParser () <CPParserDelegate>
 @property CPParser *parser;
@@ -26,6 +31,29 @@
 //		NSLog(@"%f", [(Expression *)[parser parse:tokenStream] value]);
     }
     return self;
+}
+
+
+#pragma mark - Public API
+
+- (BOOL)expressionIsValid:(NSString *)expression {
+	// Terribly ineffient way to do this
+	CPTokenStream *tokenStream = [[EXPTokenizer new] tokenizeExpression:expression];
+	EXPExpression *evaluatedExpression = [self.parser parse:tokenStream];
+	
+	return evaluatedExpression != nil;
+}
+
+
+- (double)evaluateExpression:(NSString *)expression {
+	CPTokenStream *tokenStream = [[EXPTokenizer new] tokenizeExpression:expression];
+	EXPExpression *evaluatedExpression = [self.parser parse:tokenStream];
+	
+	if (evaluatedExpression) {
+		return evaluatedExpression.value;
+	}
+	
+	return EXPExpressionParserErrorResult;
 }
 
 

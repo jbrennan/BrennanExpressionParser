@@ -26,6 +26,8 @@
 		CD13E41417AF2D8F0035A43B /* EXPFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13E41217AF2D8F0035A43B /* EXPFactor.m */; };
 		CD13E41717AF2DBB0035A43B /* EXPFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13E41517AF2DBB0035A43B /* EXPFunction.h */; };
 		CD13E41817AF2DBB0035A43B /* EXPFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13E41617AF2DBB0035A43B /* EXPFunction.m */; };
+		CD13E41C17AF4E630035A43B /* EXPExpressionParser.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13E41A17AF4E630035A43B /* EXPExpressionParser.h */; };
+		CD13E41D17AF4E630035A43B /* EXPExpressionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13E41B17AF4E630035A43B /* EXPExpressionParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		CD13E41217AF2D8F0035A43B /* EXPFactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPFactor.m; sourceTree = "<group>"; };
 		CD13E41517AF2DBB0035A43B /* EXPFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPFunction.h; sourceTree = "<group>"; };
 		CD13E41617AF2DBB0035A43B /* EXPFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPFunction.m; sourceTree = "<group>"; };
+		CD13E41A17AF4E630035A43B /* EXPExpressionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPExpressionParser.h; sourceTree = "<group>"; };
+		CD13E41B17AF4E630035A43B /* EXPExpressionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPExpressionParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 		CD13E3D417AEBDFE0035A43B /* ExpressionParser */ = {
 			isa = PBXGroup;
 			children = (
+				CD13E41917AF4DF90035A43B /* Public API */,
 				CD13E40417AF2BF30035A43B /* ASTNodes */,
 				CD13E3F717AEBF210035A43B /* Parser */,
 				CD13E3E317AEBE540035A43B /* Libraries */,
@@ -216,6 +221,15 @@
 			path = ASTNodes;
 			sourceTree = "<group>";
 		};
+		CD13E41917AF4DF90035A43B /* Public API */ = {
+			isa = PBXGroup;
+			children = (
+				CD13E41A17AF4E630035A43B /* EXPExpressionParser.h */,
+				CD13E41B17AF4E630035A43B /* EXPExpressionParser.m */,
+			);
+			path = "Public API";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -231,6 +245,7 @@
 				CD13E40F17AF2D7B0035A43B /* EXPTerm.h in Headers */,
 				CD13E41317AF2D8F0035A43B /* EXPFactor.h in Headers */,
 				CD13E41717AF2DBB0035A43B /* EXPFunction.h in Headers */,
+				CD13E41C17AF4E630035A43B /* EXPExpressionParser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +365,7 @@
 				CD13E41017AF2D7B0035A43B /* EXPTerm.m in Sources */,
 				CD13E41417AF2D8F0035A43B /* EXPFactor.m in Sources */,
 				CD13E41817AF2DBB0035A43B /* EXPFunction.m in Sources */,
+				CD13E41D17AF4E630035A43B /* EXPExpressionParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
