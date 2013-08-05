@@ -23,4 +23,17 @@
     return self;
 }
 
+
+#pragma mark - Public API
+
+- (BOOL)expressionIsValid:(NSString *)expression {
+	// Terribly ineffient way to do this
+	[self.parser expressionIsValid:expression];
+}
+
+
+- (double)evaluateExpression:(NSString *)expression {
+	[self.parser evaluateExpression:expression];
+}
+
 @end

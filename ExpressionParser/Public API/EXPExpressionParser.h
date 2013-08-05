@@ -13,6 +13,17 @@
 */
 @interface EXPExpressionParser : NSObject
 
+/**
+ Returns whether or not the expression is valid and can be evaluated.
+ */
+- (BOOL)expressionIsValid:(NSString *)expression;
 
+
+/**
+ Evaluates the expression, if it was valid.
+ 
+ @return The result of the expression.
+ */
+- (double)evaluateExpression:(NSString *)expression;
 
 @end
