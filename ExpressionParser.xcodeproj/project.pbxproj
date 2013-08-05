@@ -491,6 +491,7 @@
 				CD13E3E217AEBDFE0035A43B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
