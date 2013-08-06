@@ -13,7 +13,7 @@ NSString * const EXPGrammarTagFactor = @"fact";
 NSString * const EXPGrammarTagExpression = @"expr";
 NSString * const EXPGrammarTagOp = @"op";
 NSString * const EXPGrammarTagFunction = @"func";
-NSString * const EXPGrammarTagFunctionName = @"funcName";
+NSString * const EXPGrammarTagFunctionName = @"funcname";
 
 @interface EXPGrammar ()
 @property (readwrite) CPGrammar *grammar;
@@ -33,7 +33,7 @@ NSString * const EXPGrammarTagFunctionName = @"funcName";
 
 - (void)setupGrammar {
 	// We construct parsers by specifying their grammar. We can construct a grammar simply using a simple BNF like language. Note the syntax tag@<NonTerminal> can be read simply as <NonTerminal>, the tag can be used later to quickly extract values from the parsed result
-	
+	[[NSUserDefaults standardUserDefaults] setObject:@"EXP" forKey:@"CPGrammarClassPrefixKey"];
 	NSString *expressionGrammar =
 	@"Expression	::= term@<Term> | expr@<Expression> op@<AddOp> term@<Term>;" // <NonTerminal>
 	@"Term			::= fact@<Factor> | fact@<Factor> op@<PowOp> term@<Term> | fact@<Factor> op@<MulOp> term@<Term>;"

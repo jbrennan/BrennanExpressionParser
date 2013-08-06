@@ -26,6 +26,7 @@ const double EXPExpressionParserErrorResult = (double)CGFLOAT_MAX;
     if (self) {
         CPParser *parser = [CPLALR1Parser parserWithGrammar:[[EXPGrammar new] grammar]];
 		[parser setDelegate:self];
+		[parser setGrammarClassPrefix:@"EXP"];
 		self.parser = parser;
 		
 //		NSLog(@"%f", [(Expression *)[parser parse:tokenStream] value]);
