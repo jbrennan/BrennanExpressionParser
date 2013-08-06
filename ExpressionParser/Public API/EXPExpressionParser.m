@@ -13,6 +13,7 @@
 @property EXPParser *parser;
 @end
 
+
 @implementation EXPExpressionParser
 
 - (instancetype)init {
@@ -28,12 +29,12 @@
 
 - (BOOL)expressionIsValid:(NSString *)expression {
 	// Terribly ineffient way to do this
-	[self.parser expressionIsValid:expression];
+	return [self.parser expressionIsValid:expression];
 }
 
 
 - (double)evaluateExpression:(NSString *)expression {
-	[self.parser evaluateExpression:expression];
+	return [self.parser evaluateExpression:expression];
 }
 
 @end
