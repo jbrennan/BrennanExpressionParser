@@ -1,7 +1,7 @@
 Brennan's Expression Parser
 ---------------------------
 
-This is a basic mathematical expression parser written with the lovely [CorePlot](), partially because I needed to parse math, and partially because I wanted to learn how to work with formal grammars and parsers. There are other math parsers for Cocoa, some of which I've used, but this one is my take at it.
+This is a basic mathematical expression parser written with the lovely [CoreParse](https://github.com/beelsebob/CoreParse), partially because I needed to parse math, and partially because I wanted to learn how to work with formal grammars and parsers. There are other math parsers for Cocoa, some of which I've used, but this one is my take at it.
 
 To use
 ------
