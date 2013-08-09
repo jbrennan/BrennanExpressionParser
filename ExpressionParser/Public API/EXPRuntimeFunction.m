@@ -9,7 +9,7 @@
 #import "EXPRuntimeFunction.h"
 
 @interface EXPRuntimeFunction ()
-@property NSString *identifierName;
+@property (readwrite) NSString *identifierName;
 @property (copy) EXPRuntimeFunctionBlock functionBlock;
 @end
 

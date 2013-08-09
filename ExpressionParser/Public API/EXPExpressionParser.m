@@ -8,6 +8,7 @@
 
 #import "EXPExpressionParser.h"
 #import "EXPParser.h"
+#import "EXPRuntimeFunction.h"
 
 @interface EXPExpressionParser ()
 @property EXPParser *parser;
@@ -20,6 +21,7 @@
     self = [super init];
     if (self) {
         self.parser = [EXPParser new];
+		[self setupParserEvironment];
     }
     return self;
 }
@@ -35,6 +37,19 @@
 
 - (double)evaluateExpression:(NSString *)expression {
 	return [self.parser evaluateExpression:expression];
+}
+
+
+#pragma mark - Private API
+
+- (void)setupParserEvironment {
+	
+	EXPRuntimeFunction *sine = [EXPRuntimeFunction newWithIdentifierName:@"sin" functionBlock:^double(NSArray *arguments) {
+		NSNumber *x = arguments[0];
+		return sin([x doubleValue]);
+	}];
+	
+	[EXPParser setValue:sine forIdentifierName:sine.identifierName];
 }
 
 @end

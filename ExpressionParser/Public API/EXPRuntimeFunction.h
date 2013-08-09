@@ -23,6 +23,8 @@ typedef double (^EXPRuntimeFunctionBlock)(NSArray *arguments);
 */
 @interface EXPRuntimeFunction : NSObject
 
+@property (readonly) NSString *identifierName;
+
 /**
  Designated initializer.
  
