@@ -10,6 +10,7 @@
 #import "EXPExpression.h"
 #import "EXPGrammar.h"
 #import "EXPTokenizer.h"
+#import "EXPIDNode.h"
 
 @implementation EXPFunction
 
@@ -21,9 +22,9 @@
 		NSLog(@"Function initWithSyntaxTree: %@", syntaxTree);
 		
 		EXPExpression *expression = [syntaxTree valueForTag:EXPGrammarTagExpression];
-		NSString *name = [syntaxTree valueForTag:EXPGrammarTagFunctionName];
+		EXPIDNode *identifier = [syntaxTree valueForTag:EXPGrammarTagIdentifierNode];
 		
-		if ([name isEqualToString:EXPTokenKeywordNameSquare]) {
+		if ([identifier.name isEqualToString:EXPTokenKeywordNameSquare]) {
 			self.value = expression.value * expression.value;
 		}
 	}

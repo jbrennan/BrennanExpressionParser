@@ -29,6 +29,8 @@
 		CD13E41C17AF4E630035A43B /* EXPExpressionParser.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13E41A17AF4E630035A43B /* EXPExpressionParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD13E41D17AF4E630035A43B /* EXPExpressionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13E41B17AF4E630035A43B /* EXPExpressionParser.m */; };
 		CD13E43317AF5A370035A43B /* ExpressionParser.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13E3DB17AEBDFE0035A43B /* ExpressionParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD5F823717B49F9600C2805F /* EXPIDNode.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5F823517B49F9600C2805F /* EXPIDNode.h */; };
+		CD5F823817B49F9600C2805F /* EXPIDNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5F823617B49F9600C2805F /* EXPIDNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		CD13E41617AF2DBB0035A43B /* EXPFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPFunction.m; sourceTree = "<group>"; };
 		CD13E41A17AF4E630035A43B /* EXPExpressionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPExpressionParser.h; sourceTree = "<group>"; };
 		CD13E41B17AF4E630035A43B /* EXPExpressionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPExpressionParser.m; sourceTree = "<group>"; };
+		CD5F823517B49F9600C2805F /* EXPIDNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPIDNode.h; sourceTree = "<group>"; };
+		CD5F823617B49F9600C2805F /* EXPIDNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPIDNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,8 @@
 				CD13E41217AF2D8F0035A43B /* EXPFactor.m */,
 				CD13E41517AF2DBB0035A43B /* EXPFunction.h */,
 				CD13E41617AF2DBB0035A43B /* EXPFunction.m */,
+				CD5F823517B49F9600C2805F /* EXPIDNode.h */,
+				CD5F823617B49F9600C2805F /* EXPIDNode.m */,
 			);
 			path = ASTNodes;
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 				CD13E40F17AF2D7B0035A43B /* EXPTerm.h in Headers */,
 				CD13E41317AF2D8F0035A43B /* EXPFactor.h in Headers */,
 				CD13E41717AF2DBB0035A43B /* EXPFunction.h in Headers */,
+				CD5F823717B49F9600C2805F /* EXPIDNode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +375,7 @@
 				CD13E41417AF2D8F0035A43B /* EXPFactor.m in Sources */,
 				CD13E41817AF2DBB0035A43B /* EXPFunction.m in Sources */,
 				CD13E41D17AF4E630035A43B /* EXPExpressionParser.m in Sources */,
+				CD5F823817B49F9600C2805F /* EXPIDNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
