@@ -8,6 +8,7 @@
 
 #import "EXPIDNode.h"
 #import "EXPGrammar.h"
+#import "EXPParser.h"
 
 @implementation EXPIDNode
 
@@ -20,7 +21,7 @@
 		
 		CPIdentifierToken *token = [syntaxTree valueForTag:EXPGrammarTagIdentifier];
 		self.name = token.name;
-		self.representedObject = nil; // some kind of environment?
+		self.representedObject = [EXPParser valueForIdentifierName:self.name]; // some kind of environment?
 	}
 	
 	return self;
