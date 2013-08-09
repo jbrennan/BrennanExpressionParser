@@ -40,6 +40,11 @@
 }
 
 
+- (NSString *)description {
+	return [NSString stringWithFormat:@"<%@ %p: identifier: %@>", NSStringFromClass([self class]), &self, self.identifierName];
+}
+
+
 #pragma mark - TODO
 
 - (NSString *)documentation {
