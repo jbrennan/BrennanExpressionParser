@@ -27,7 +27,37 @@ typedef double (^EXPRuntimeFunctionBlock)(NSArray *arguments);
  Designated initializer.
  
  Creates a new object representing a runtime function.
- */
+ 
+ @note This could be extended to allow for a (potentially variable) number of arguments.
+*/
 + (instancetype)newWithIdentifierName:(NSString *)identifierName functionBlock:(EXPRuntimeFunctionBlock)functionBlock;
+
+
+/**
+ Evaluates the function with the given list of arguments.
+ 
+ @note This might eventually change to return an object. For now, it's just a double.
+*/
+- (double)evaluateWithArguments:(NSArray *)arguments;
+
+#pragma mark - TODO
+
+
+/**
+ This method should return appropriate usage documentation for the function,
+ including parameter usage and return value.
+ 
+ Not yet implemented or used.
+*/
+- (NSString *)documentation;
+
+
+/**
+ This method should return some kind of visualization of the function or its return value.
+ It would likely return an image of some kind, or maybe an interactive view.
+ 
+ Not yet implemented or used.
+*/
+- (id)visualization;
 
 @end
