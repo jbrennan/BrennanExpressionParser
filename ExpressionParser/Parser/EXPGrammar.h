@@ -14,6 +14,8 @@ extern NSString * const EXPGrammarTagExpression;
 extern NSString * const EXPGrammarTagOp;
 extern NSString * const EXPGrammarTagFunction;
 extern NSString * const EXPGrammarTagFunctionName;
+extern NSString * const EXPGrammarTagIdentifier;
+extern NSString * const EXPGrammarTagIdentifierNode;
 
 /**
  A thin wrapper around CPGrammar for setting up the math grammar.

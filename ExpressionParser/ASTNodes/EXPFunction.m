@@ -10,6 +10,8 @@
 #import "EXPExpression.h"
 #import "EXPGrammar.h"
 #import "EXPTokenizer.h"
+#import "EXPIDNode.h"
+#import "EXPRuntimeFunction.h"
 
 @implementation EXPFunction
 
@@ -21,11 +23,19 @@
 		NSLog(@"Function initWithSyntaxTree: %@", syntaxTree);
 		
 		EXPExpression *expression = [syntaxTree valueForTag:EXPGrammarTagExpression];
-		NSString *name = [syntaxTree valueForTag:EXPGrammarTagFunctionName];
+		EXPIDNode *identifier = [syntaxTree valueForTag:EXPGrammarTagIdentifierNode];
 		
-		if ([name isEqualToString:EXPTokenKeywordNameSquare]) {
-			self.value = expression.value * expression.value;
+		EXPRuntimeFunction *function = identifier.representedObject;
+		if (![function isKindOfClass:[EXPRuntimeFunction class]]) {
+			NSLog(@"Error: Identifier (%@) did not have a function as its represented object. Instead had (%@)", identifier, function);
+			self.value = 0;
+		} else {
+			self.value = [function evaluateWithArguments:@[@(expression.value)]];
 		}
+		
+//		if ([identifier.name isEqualToString:EXPTokenKeywordNameSquare]) {
+//			self.value = expression.value * expression.value;
+//		}
 	}
 	
 	return self;

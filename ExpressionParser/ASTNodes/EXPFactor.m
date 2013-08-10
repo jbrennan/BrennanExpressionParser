@@ -10,6 +10,7 @@
 #import "EXPExpression.h"
 #import "EXPFunction.h"
 #import "EXPGrammar.h"
+#import "EXPIDNode.h"
 
 @implementation EXPFactor
 
@@ -21,14 +22,16 @@
 		NSLog(@"Factor initWithSyntaxTree: %@", syntaxTree);
 		EXPExpression *e = [syntaxTree valueForTag:EXPGrammarTagExpression];
 		EXPFunction *f = [syntaxTree valueForTag:EXPGrammarTagFunction];
+		EXPIDNode *identifier = [syntaxTree valueForTag:EXPGrammarTagIdentifierNode];
 		
 		if (e) {
 			self.value = e.value;
 		} else if (f) {
 			self.value = f.value;
+		} else if (identifier) {
+			self.value = [(NSNumber *)identifier.representedObject doubleValue];
 		} else {
 			self.value = [[[syntaxTree valueForTag:@"num"] number] floatValue];
-			
 		}
 	}
 	
