@@ -14,7 +14,11 @@ int main(int argc, const char * argv[]) {
 	@autoreleasepool {
 	    
 	    EXPExpressionParser *parser = [EXPExpressionParser new];
-		double result = [parser evaluateExpression:@"sin(x)"];
+		double result = [parser evaluateExpression:@"sqrt(x)"];
+		NSLog(@"%f", result);
+		
+		[parser setValue:@25 forSymbolNameInExpression:@"x"];
+		result = [parser evaluateExpression:@"sqrt(x)"];
 		NSLog(@"%f", result);
 	    
 	}
