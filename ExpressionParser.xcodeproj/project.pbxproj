@@ -29,6 +29,10 @@
 		CD13E41C17AF4E630035A43B /* EXPExpressionParser.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13E41A17AF4E630035A43B /* EXPExpressionParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD13E41D17AF4E630035A43B /* EXPExpressionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13E41B17AF4E630035A43B /* EXPExpressionParser.m */; };
 		CD13E43317AF5A370035A43B /* ExpressionParser.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13E3DB17AEBDFE0035A43B /* ExpressionParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD2242B017B6DFC300E16971 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2242AF17B6DFC300E16971 /* Foundation.framework */; };
+		CD2242B317B6DFC300E16971 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2242B217B6DFC300E16971 /* main.m */; };
+		CD2242B717B6DFC300E16971 /* ExpressionSandbox.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD2242B617B6DFC300E16971 /* ExpressionSandbox.1 */; };
+		CD2242C017B6E04300E16971 /* ExpressionParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD13E3CB17AEBDFE0035A43B /* ExpressionParser.framework */; };
 		CD5F823717B49F9600C2805F /* EXPIDNode.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5F823517B49F9600C2805F /* EXPIDNode.h */; };
 		CD5F823817B49F9600C2805F /* EXPIDNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5F823617B49F9600C2805F /* EXPIDNode.m */; };
 		CD5F824017B4AAA300C2805F /* EXPRuntimeFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5F823E17B4AAA300C2805F /* EXPRuntimeFunction.h */; };
@@ -73,6 +77,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CD2242AC17B6DFC300E16971 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				CD2242B717B6DFC300E16971 /* ExpressionSandbox.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		CD13E3CB17AEBDFE0035A43B /* ExpressionParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExpressionParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD13E3CE17AEBDFE0035A43B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -102,6 +119,11 @@
 		CD13E41617AF2DBB0035A43B /* EXPFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPFunction.m; sourceTree = "<group>"; };
 		CD13E41A17AF4E630035A43B /* EXPExpressionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPExpressionParser.h; sourceTree = "<group>"; };
 		CD13E41B17AF4E630035A43B /* EXPExpressionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPExpressionParser.m; sourceTree = "<group>"; };
+		CD2242AE17B6DFC300E16971 /* ExpressionSandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExpressionSandbox; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD2242AF17B6DFC300E16971 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CD2242B217B6DFC300E16971 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD2242B517B6DFC300E16971 /* ExpressionSandbox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExpressionSandbox-Prefix.pch"; sourceTree = "<group>"; };
+		CD2242B617B6DFC300E16971 /* ExpressionSandbox.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ExpressionSandbox.1; sourceTree = "<group>"; };
 		CD5F823517B49F9600C2805F /* EXPIDNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPIDNode.h; sourceTree = "<group>"; };
 		CD5F823617B49F9600C2805F /* EXPIDNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPIDNode.m; sourceTree = "<group>"; };
 		CD5F823E17B4AAA300C2805F /* EXPRuntimeFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPRuntimeFunction.h; sourceTree = "<group>"; };
@@ -118,6 +140,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CD2242AB17B6DFC300E16971 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD2242C017B6E04300E16971 /* ExpressionParser.framework in Frameworks */,
+				CD2242B017B6DFC300E16971 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -125,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				CD13E3D417AEBDFE0035A43B /* ExpressionParser */,
+				CD2242B117B6DFC300E16971 /* ExpressionSandbox */,
 				CD13E3CD17AEBDFE0035A43B /* Frameworks */,
 				CD13E3CC17AEBDFE0035A43B /* Products */,
 			);
@@ -134,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				CD13E3CB17AEBDFE0035A43B /* ExpressionParser.framework */,
+				CD2242AE17B6DFC300E16971 /* ExpressionSandbox */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				CD13E3CE17AEBDFE0035A43B /* Cocoa.framework */,
+				CD2242AF17B6DFC300E16971 /* Foundation.framework */,
 				CD13E3D017AEBDFE0035A43B /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -243,6 +277,24 @@
 			path = "Public API";
 			sourceTree = "<group>";
 		};
+		CD2242B117B6DFC300E16971 /* ExpressionSandbox */ = {
+			isa = PBXGroup;
+			children = (
+				CD2242B217B6DFC300E16971 /* main.m */,
+				CD2242B617B6DFC300E16971 /* ExpressionSandbox.1 */,
+				CD2242B417B6DFC300E16971 /* Supporting Files */,
+			);
+			path = ExpressionSandbox;
+			sourceTree = "<group>";
+		};
+		CD2242B417B6DFC300E16971 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD2242B517B6DFC300E16971 /* ExpressionSandbox-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -286,6 +338,23 @@
 			productReference = CD13E3CB17AEBDFE0035A43B /* ExpressionParser.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		CD2242AD17B6DFC300E16971 /* ExpressionSandbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD2242BF17B6DFC300E16971 /* Build configuration list for PBXNativeTarget "ExpressionSandbox" */;
+			buildPhases = (
+				CD2242AA17B6DFC300E16971 /* Sources */,
+				CD2242AB17B6DFC300E16971 /* Frameworks */,
+				CD2242AC17B6DFC300E16971 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExpressionSandbox;
+			productName = ExpressionSandbox;
+			productReference = CD2242AE17B6DFC300E16971 /* ExpressionSandbox */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -315,6 +384,7 @@
 			projectRoot = "";
 			targets = (
 				CD13E3CA17AEBDFE0035A43B /* ExpressionParser */,
+				CD2242AD17B6DFC300E16971 /* ExpressionSandbox */,
 			);
 		};
 /* End PBXProject section */
@@ -384,6 +454,14 @@
 				CD13E41D17AF4E630035A43B /* EXPExpressionParser.m in Sources */,
 				CD5F823817B49F9600C2805F /* EXPIDNode.m in Sources */,
 				CD5F824117B4AAA300C2805F /* EXPRuntimeFunction.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD2242AA17B6DFC300E16971 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD2242B317B6DFC300E16971 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +568,24 @@
 			};
 			name = Release;
 		};
+		CD2242B817B6DFC300E16971 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ExpressionSandbox/ExpressionSandbox-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD2242B917B6DFC300E16971 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ExpressionSandbox/ExpressionSandbox-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -510,6 +606,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		CD2242BF17B6DFC300E16971 /* Build configuration list for PBXNativeTarget "ExpressionSandbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD2242B817B6DFC300E16971 /* Debug */,
+				CD2242B917B6DFC300E16971 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

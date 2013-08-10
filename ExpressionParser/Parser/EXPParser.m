@@ -76,11 +76,11 @@ const double EXPExpressionParserErrorResult = (double)CGFLOAT_MAX;
 }
 
 
-//- (CPRecoveryAction *)parser:(CPParser *)parser didEncounterErrorOnInput:(CPTokenStream *)inputStream expecting:(NSSet *)acceptableTokens {
-//	NSLog(@"error parsing?");
-//
-//	return [CPRecoveryAction recoveryActionStop];
-//}
+- (CPRecoveryAction *)parser:(CPParser *)parser didEncounterErrorOnInput:(CPTokenStream *)inputStream expecting:(NSSet *)acceptableTokens {
+	NSLog(@"error parsing?");
+
+	return [CPRecoveryAction recoveryActionStop];
+}
 
 #pragma mark - Private API
 

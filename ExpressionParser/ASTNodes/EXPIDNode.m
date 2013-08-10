@@ -20,7 +20,7 @@
 		NSLog(@"IDNode initWithSyntaxTree: %@", syntaxTree);
 		
 		CPIdentifierToken *token = [syntaxTree valueForTag:EXPGrammarTagIdentifier];
-		self.name = token.name;
+		self.name = token.identifier;
 		self.representedObject = [EXPParser valueForIdentifierName:self.name]; // some kind of environment?
 	}
 	
