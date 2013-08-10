@@ -40,6 +40,11 @@
 }
 
 
+- (void)setValue:(id)value forSymbolNameInExpression:(NSString *)symbolName {
+	[EXPParser setValue:value forIdentifierName:symbolName];
+}
+
+
 #pragma mark - Private API
 
 - (void)setupParserEvironment {

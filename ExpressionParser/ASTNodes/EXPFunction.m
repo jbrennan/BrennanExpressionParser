@@ -11,6 +11,7 @@
 #import "EXPGrammar.h"
 #import "EXPTokenizer.h"
 #import "EXPIDNode.h"
+#import "EXPRuntimeFunction.h"
 
 @implementation EXPFunction
 
@@ -24,9 +25,17 @@
 		EXPExpression *expression = [syntaxTree valueForTag:EXPGrammarTagExpression];
 		EXPIDNode *identifier = [syntaxTree valueForTag:EXPGrammarTagIdentifierNode];
 		
-		if ([identifier.name isEqualToString:EXPTokenKeywordNameSquare]) {
-			self.value = expression.value * expression.value;
+		EXPRuntimeFunction *function = identifier.representedObject;
+		if (![function isKindOfClass:[EXPRuntimeFunction class]]) {
+			NSLog(@"Error: Identifier (%@) did not have a function as its represented object. Instead had (%@)", identifier, function);
+			self.value = 0;
+		} else {
+			self.value = [function evaluateWithArguments:@[@(expression.value)]];
 		}
+		
+//		if ([identifier.name isEqualToString:EXPTokenKeywordNameSquare]) {
+//			self.value = expression.value * expression.value;
+//		}
 	}
 	
 	return self;
