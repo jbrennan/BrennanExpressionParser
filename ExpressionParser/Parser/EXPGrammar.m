@@ -13,7 +13,9 @@ NSString * const EXPGrammarTagFactor = @"fact";
 NSString * const EXPGrammarTagExpression = @"expr";
 NSString * const EXPGrammarTagOp = @"op";
 NSString * const EXPGrammarTagFunction = @"func";
-NSString * const EXPGrammarTagFunctionName = @"funcname";
+NSString * const EXPGrammarTagIdentifier = @"ident";
+NSString * const EXPGrammarTagIdentifierNode = @"idnode";
+
 
 @interface EXPGrammar ()
 @property (readwrite) CPGrammar *grammar;
@@ -37,12 +39,12 @@ NSString * const EXPGrammarTagFunctionName = @"funcname";
 	NSString *expressionGrammar =
 	@"Expression	::= term@<Term> | expr@<Expression> op@<AddOp> term@<Term>;" // <NonTerminal>
 	@"Term			::= fact@<Factor> | fact@<Factor> op@<PowOp> term@<Term> | fact@<Factor> op@<MulOp> term@<Term>;"
-	@"Factor		::= num@'Number' | func@<Function> | '(' expr@<Expression> ')';" // 'Terminal'
+	@"Factor		::= num@'Number' | idnode@<IDNode> | func@<Function> | '(' expr@<Expression> ')';" // 'Terminal'
 	@"AddOp			::= '+' | '-';"
 	@"MulOp			::= '*' | '/';"
 	@"PowOp			::= '**';"
-	@"Function		::= funcname@<FuncName> '(' expr@<Expression> ')';"
-	@"FuncName		::= 'square';";
+	@"Function		::= idnode@<IDNode> '(' expr@<Expression> ')';"
+	@"IDNode		::= ident@'Identifier';";
 	
 	
 	NSError *grammarError = nil;

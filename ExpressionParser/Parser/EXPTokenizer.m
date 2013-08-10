@@ -36,6 +36,7 @@ NSString * const EXPTokenKeywordNameSquare = @"square";
 		[tokenizer addTokenRecogniser:[CPNumberRecogniser numberRecogniser]];
 		[tokenizer addTokenRecogniser:[CPWhiteSpaceRecogniser whiteSpaceRecogniser]];
 		[tokenizer addTokenRecogniser:[CPQuotedRecogniser quotedRecogniserWithStartQuote:@"/*" endQuote:@"*/" name:@"Comment"]];
+		[tokenizer addTokenRecogniser:[CPIdentifierRecogniser identifierRecogniser]];
 		
 		[tokenizer addTokenRecogniserForKeyword:EXPTokenKeywordSymbolPlus];
 		[tokenizer addTokenRecogniserForKeyword:EXPTokenKeywordSymbolMinus];

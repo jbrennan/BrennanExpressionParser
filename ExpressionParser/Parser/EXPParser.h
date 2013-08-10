@@ -28,4 +28,22 @@ extern const double EXPExpressionParserErrorResult;
 */
 - (double)evaluateExpression:(NSString *)expression;
 
+
+/**
+ Sets an object value keyed by an identifier name, to be used by the EXPIDNode objects.
+ Basically, this lets you custommize objects at runtime which will be used by the expression parser.
+ You can use this to add new functions or set a number for a variable in the expression.
+ 
+ @param value An object to be represented by an identifier in an expression.
+ @param identifierName The name of the identifier as it appears in an expression.
+ */
++ (void)setValue:(id)value forIdentifierName:(NSString *)identifierName;
+
+/**
+ Returns the value, if any, saved in the environment.
+ 
+ Currently, there is only a single environment for all parsing.
+ */
++ (id)valueForIdentifierName:(NSString *)identifierName;
+
 @end

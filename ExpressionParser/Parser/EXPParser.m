@@ -58,6 +58,16 @@ const double EXPExpressionParserErrorResult = (double)CGFLOAT_MAX;
 }
 
 
++ (void)setValue:(id)value forIdentifierName:(NSString *)identifierName {
+	[[self environment] setValue:value forKey:identifierName];
+}
+
+
++ (id)valueForIdentifierName:(NSString *)identifierName {
+	return [self environment][identifierName];
+}
+
+
 #pragma mark - Parser delegate
 
 - (id)parser:(CPParser *)parser didProduceSyntaxTree:(CPSyntaxTree *)syntaxTree {
@@ -71,6 +81,18 @@ const double EXPExpressionParserErrorResult = (double)CGFLOAT_MAX;
 //
 //	return [CPRecoveryAction recoveryActionStop];
 //}
+
+#pragma mark - Private API
+
++ (NSMutableDictionary *)environment {
+	static NSMutableDictionary *_environment = nil;
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		_environment = [NSMutableDictionary new];
+	});
+	
+	return _environment;
+}
 
 
 @end
